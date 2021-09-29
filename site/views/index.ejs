@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Super calculadora</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+	</head>	
+	<body class="fondo">
+	<div class="modal-content text-center center">
+    		<div class="modal-content center">
+		<h1 class="color-violeta">SUPER CALCULADORA</h1>		
+		<table class="modal-content text-center color-calc">
+		 <tr>
+		    <td colspan="3">
+		    	<input type="text" id="resultado" name="resultado"/>
+		    </td>
+		    <!-- clr() function will call clr to clear all value -->
+		    <td class="color-clear">
+		    	<input class="button" type="button" value="C" onclick="limpiarC()"/> 
+		    </td>
+		    <td class="color-clear">
+		    	<input class="button" type="button" value="X" onclick="limpiarX()"/> 
+		    </td>
+		 </tr>
+		 <tr>
+		    <td class="color-number"><input class="button" type="button" value="1" onclick="ingresar('1')"/> </td>
+		    <td class="color-number"><input class="button" type="button" value="2" onclick="ingresar('2')"/> </td>
+		    <td class="color-number"><input class="button" type="button" value="3" onclick="ingresar('3')"/> </td>
+		    <td class="color-operator"><input class="button" type="button" value="/" onclick="ingresar('/')"/> </td>
+		    <td class="color-operator"><input class="button" type="button" value="*" onclick="ingresar('*')"/> </td>
+		 </tr>
+		 <tr>
+		    <td class="color-number"><input class="button" type="button" value="4" onclick="ingresar('4')"/> </td>
+		    <td class="color-number"><input class="button" type="button" value="5" onclick="ingresar('5')"/> </td>
+		    <td class="color-number"><input class="button" type="button" value="6" onclick="ingresar('6')"/> </td>
+		    <td class="color-operator"><input class="button" type="button" value="+" onclick="ingresar('+')"/> </td>
+		    <td class="color-operator"><input class="button" type="button" value="-" onclick="ingresar('-')"/> </td>
+		 </tr>
+		 <tr>
+		    <td class="color-number"><input class="button" type="button" value="7" onclick="ingresar('7')"/> </td>
+		    <td class="color-number"><input class="button" type="button" value="8" onclick="ingresar('8')"/> </td>
+		    <td class="color-number"><input class="button" type="button" value="9" onclick="ingresar('9')"/> </td>
+		    <td class="color-operator"><input class="button" type="button" value="^" onclick="ingresar('^')"/> </td>
+		    <td class="color-operator"><input class="button" type="button" value="%" onclick="ingresar('%')"/> </td>
+		 </tr>
+		 <tr>
+		    <td class="color-number"><input class="button" type="button" value="." onclick="ingresar('.')"/> </td>
+		    <td class="color-number"><input class="button" type="button" value="0" onclick="ingresar('0')"/> </td>
+		    <td class="color-solve"><input class="button" type="button" value="=" onclick="resolver()"/> </td>
+		    <td class="color-operator"><input class="button" type="button" value="(" onclick="ingresar('(')"/> </td>
+		    <td class="color-operator"><input class="button" type="button" value=")" onclick="ingresar(')')"/> </td>
+		 </tr>
+	      </table>
+	      <h3 class="color-violeta">HISTORIAL</h3>
+	      <table class="table modal-content1 text-center color-operator" id="tabla-historial">
+		 <tr>
+		    <td colspan="3" class="color-title">
+		    	<p class="button text-center">OPERACION</p>
+		    </td>
+		    <td colspan="1" class="color-title">
+		    	<p class="button text-center">=</p>
+		    </td>
+		    <td colspan="3" class="color-title">
+		    	<p class="button text-center">RESULTADO</p>
+		    </td>		    
+		 </tr>	 
+	      </table>
+	     </div>
+	</div>
+	<div class="a-footer">
+    		<p>COPYRIGHT © UNIVERSIDAD SAN CARLOS DE GUATEMALA </p>
+	</div>
+	<script type="text/javascript" src="js/script.js"></script>
+	</body>
+	
+ 
+</html>
+
+

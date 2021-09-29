@@ -1,0 +1,37 @@
+version: '3'
+services: 
+  apirest:
+    build:
+      dockerfile: Dockerfile
+      context: ./apiRest
+    volumes: 
+      #- ./apiRest/api:/app/api
+      - ./apiRest/public:/app/public
+      - ./apiRest/src:/app/src
+      #- ./apiRest/views:/app/views
+
+      - ./apiRest/package.json:/app/package.json
+    #ports: 
+    #  - "3001:3001"
+  site:
+    stdin_open: true
+    build: 
+      dockerfile: Dockerfile
+      context: ./site
+    volumes: 
+      - ./site/public:/app/public
+      - ./site/src:/app/src
+      - ./site/views:/app/views
+      - ./site/package.json:/app/package.json
+    #ports: 
+    #  - "80:3000"
+  nginx:
+    depends_on: 
+      - site
+      - apirest
+    restart: always
+    build: 
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports: 
+      - "4000:4000"

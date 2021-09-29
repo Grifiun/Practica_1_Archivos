@@ -1,0 +1,178 @@
+.center{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      
+ }
+
+input{
+	padding:8px;
+	border:none;
+	margin-top: 5px;
+	border-bottom:1px solid #ccc;
+	width:auto;
+}
+
+button{
+	border:none;
+	display:inline-block;
+	padding:8px 16px;
+	vertical-align:middle;
+	overflow:hidden;
+	text-decoration:none;
+	color:inherit;
+	background-color:inherit;
+	text-align:center;
+	cursor:pointer;
+	white-space:nowrap
+}
+
+.table{
+	border-collapse: collapse;  
+        border: 1px solid black;
+}
+
+.td{
+	padding: 3px 3px 3px 3px;
+	
+}
+
+.datos{
+	border:1;
+	/*display:inline-block;*/
+	padding: 8px 16px;
+	vertical-align:middle;
+	/*overflow:hidden;*/
+	/*text-decoration:none;*/
+	color:inherit;
+	background-color:inherit;
+	text-align:center;
+	cursor:pointer;
+	white-space:nowrap
+}
+
+.button{
+	border:none;
+	display:inline-block;
+	/*padding:8px 16px;*/
+	vertical-align:middle;
+	overflow:hidden;
+	text-decoration:none;
+	color:inherit;
+	background-color:inherit;
+	text-align:center;
+	cursor:pointer;
+	white-space:nowrap
+}
+
+.text-center{
+	text-align: center;
+}
+
+.color-number{
+	background-color: Azure;
+}
+
+.color-operator{
+	background-color: Beige;
+}
+
+.color-clear{
+	background-color: LightCoral;
+}
+
+.color-solve{
+	background-color: LightGreen;
+}
+
+.color-calc{
+	background-color: gray;
+	padding: 5px 5px 5px 5px;
+}
+
+.color-title{
+	background-color: #ececec;
+}
+
+.color-dato{
+	background-color: AliceBlue;
+}
+
+.color-blue{
+	color: blue;
+}
+
+.color-cyan{
+	color: cyan;
+}
+
+.color-violeta{
+	color: BlueViolet;
+}
+
+.color-mar{
+	color: CornflowerBlue;
+}
+
+.color-gray{
+	color: white;  
+}
+
+.colorbc-violeta{
+	background-color: BlueViolet;
+}
+
+.colorbc-mar{
+	background-color: CornflowerBlue;
+}
+
+
+.modal-content{  
+    border: 0px;
+    /*border: 1px solid black;*/
+    margin: 45px auto;  
+   
+}
+
+.modal-content1{  
+    margin: auto;
+    width: 35%;    
+}
+
+.fondo{
+	 background: rgba(122, 119, 119, 0.15);  
+}
+
+.caja2{
+    margin-top: -15px;
+}
+
+h5, h6{
+   text-align: left;    
+}
+
+input:hover{
+    transform: scale(1.01,01.01);
+    transition: scale(1.1,1.1) .2s ease-in-out;
+}
+
+.a-footer{
+    height: 60px;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    bottom:0;
+    left:0;
+    position: fixed;
+    background: rgba(0,0,0,0.2);
+    color: rgba(0,0,0,0.7);
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+
