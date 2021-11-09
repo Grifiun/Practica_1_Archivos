@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Super calculadora</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />		
+	</head>	
+	<body class="fondo">	
+	<%- include('./navs/nav.ejs'); %>
+	<div class="modal-content text-center center">
+		
+    	<div class="modal-content center">
+		<h1 class="color-violeta">SUPER CALCULADORA - LOGIN</h1>		
+		<p name="mensaje" id="mensaje" class="color-violeta">Ingrese sus credenciales</p>
+		
+			<input type="text" name="username" id="username" required placeholder="Username"/>
+			<input type="password" name="password" id="password" required placeholder="Password"/>
+			<button type="submit" onclick="register()">Registrar</button> 
+			<button type="submit" onclick="login()">Ingresar</button> 
+	    </div>
+	</div>
+	<div class="a-footer">
+    		<p>COPYRIGHT © UNIVERSIDAD SAN CARLOS DE GUATEMALA </p>
+	</div>
+	
+	<script>
+		var username;
+		var password;
+		var mensaje;
+
+		function actualizarMensaje(mensaje){}
+		function login(){}
+		function register(){}
+	</script>
+	<script type="text/javascript" src="js/login.js"></script>
+
+	</body>
+	
+ 
+</html>
+
+

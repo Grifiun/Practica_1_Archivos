@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Super calculadora</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+	</head>	
+	<body class="fondo">	
+	<%- include('./navs/nav.ejs'); %>
+	<div class="modal-content text-center center">
+		<div class="modal-content center">
+		<h1 class="color-violeta">SUPER CALCULADORA - HISTORIAL GENERAL</h1>		
+		<table class="table modal-content1 text-center color-operator" id="tabla-historial">
+		 <tr>
+		    <td colspan="3" class="color-title">
+		    	<p class="button text-center">OPERACION</p>
+		    </td>
+		    <td colspan="1" class="color-title">
+		    	<p class="button text-center">=</p>
+		    </td>
+		    <td colspan="3" class="color-title">
+		    	<p class="button text-center">RESULTADO</p>
+		    </td>		    
+			<button type="submit" onclick="cargarHistorial()">Actualizar</button> 
+		 </tr>	 
+	      </table>
+	     </div>
+	</div>
+	<div class="a-footer">
+    		<p>COPYRIGHT © UNIVERSIDAD SAN CARLOS DE GUATEMALA </p>
+	</div>
+	<script type="text/javascript" src="js/script.js"></script>
+	</body>
+	
+ 
+</html>
+
+

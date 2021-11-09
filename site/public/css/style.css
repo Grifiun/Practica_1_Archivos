@@ -175,4 +175,29 @@ input:hover{
     font-weight: 500;
 }
 
-
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	/*background-color: gray;*/
+	background-color: #333;
+  }
+  
+  li {
+	float: left;
+  }
+  
+  li a {
+	display: block;
+	color: white;
+	/*color: black;*/
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+	/*background-color: #111;*/
+	/*background-color: #333;*/
+  }

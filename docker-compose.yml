@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 services: 
   apirest:
     build:
@@ -13,6 +13,14 @@ services:
       - ./apiRest/package.json:/app/package.json
     #ports: 
     #  - "3001:3001"
+    links:
+      - redis
+    depends_on: 
+      - worker
+    environment:
+    - REDIS_URL=redis://cache
+    - ACCES_TOKEN_SECRET=8bf346af0b57943c3a11c56cff28fa32385bdb6265828176fbab7926f39d28e5803756c2ba840be90afdda0d8868e7ec4b4c613bb19a27d4461b19970aa291d8
+    - REFRESH_TOKEN_SECRET=9c7547291902c38f2f6c0479fa2d5df0ce46cece81aa428575cefb1f343d0ab22cf1b624e317a0519fca2f727656336e77d34dd2c07cf645f895428a0088e5ad
   site:
     stdin_open: true
     build: 
@@ -23,15 +31,44 @@ services:
       - ./site/src:/app/src
       - ./site/views:/app/views
       - ./site/package.json:/app/package.json
+    links:
+      - apirest
+    depends_on: 
+      - apirest
+    environment:
+    - ACCES_TOKEN_SECRET=8bf346af0b57943c3a11c56cff28fa32385bdb6265828176fbab7926f39d28e5803756c2ba840be90afdda0d8868e7ec4b4c613bb19a27d4461b19970aa291d8
+    - REFRESH_TOKEN_SECRET=9c7547291902c38f2f6c0479fa2d5df0ce46cece81aa428575cefb1f343d0ab22cf1b624e317a0519fca2f727656336e77d34dd2c07cf645f895428a0088e5ad
     #ports: 
     #  - "80:3000"
+  worker:
+    build: 
+      dockerfile: Dockerfile
+      context: ./worker
+    volumes:
+      - ./worker/public:/app/public
+      - ./worker/src:/app/src
+    links:
+      - redis
+    environment:
+    - REDIS_URL=redis://cache
+      #- ./worker/package.json:app/package.json
+  redis:
+    image: redis
+    container_name: cache
+    expose:
+      - 6379
+    ports: 
+      - "6379:6379"
   nginx:
     depends_on: 
       - site
       - apirest
+      - worker
+      #- redis
     restart: always
     build: 
       dockerfile: Dockerfile
-      context: ./nginx
+      context: ./nginx    
     ports: 
       - "4000:4000"
+    

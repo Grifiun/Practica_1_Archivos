@@ -21,5 +21,5 @@ app.use((req, res, next) => {
 })
 
 app.listen(port, () => {
-    console.log('servidor a su servicio en el puerto', port)
+    console.log('servidor API a su servicio en el puerto', port)
 })
